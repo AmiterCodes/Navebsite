@@ -1,0 +1,110 @@
+body {
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Varela Round', sans-serif;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+}
+
+/* Style The Dropdown Button */
+.nav-bar__dropdown__title {
+  background-color: transparent;
+  
+  color: rgb(114, 233, 118);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transform: scale(1.0);
+  transition: all .3s ease;
+}
+
+.nav-bar__icon {
+  transition: all .4s;
+}
+
+.nav-bar__icon:hover {
+  transform: scale(1.1);
+}
+
+.hoverable-bg {
+
+  transition: all .3s ease;
+  background-image: linear-gradient(60deg,transparent 0%, transparent 50%, rgb(114, 233, 118) 50%, rgb(78, 221, 173) 100% );
+  background-size: 250%;
+}
+
+.hoverable-bg:hover {
+  background-position: 100%;
+}
+
+.nav-bar__dropdown:hover > .nav-bar__dropdown__title {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.nav-bar__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.nav-bar__dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: 0.5s all;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.nav-bar__dropdown__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all .3s;
+}
+
+/* Change color of dropdown links on hover */
+.nav-bar__dropdown__content a:hover {
+  transform: translateX(5px);
+  background-color: #f1f1f1;
+
+}
+
+/* Show the dropdown menu on hover */
+.nav-bar__dropdown:hover .nav-bar__dropdown__content {
+  display: block;
+  opacity: 1;
+
+  transform: scaleY(1);
+}
+
+.nav-bar__icon {
+  width: 10rem;
+  padding: 10px;
+}
+
+.nav-bar {
+  padding: 10px;
+  display: flex;
+  background-image: linear-gradient(60deg, #263D42, rgb(61, 117, 105));
+}
+
+.nav-bar__list {
+  padding: 10px;
+  list-style: none;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.nav-bar__dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
